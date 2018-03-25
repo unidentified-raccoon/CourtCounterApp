@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Court Counter App</string>
+
+    <string name="player_a_country">France</string>
+    <string name="player_b_country">Norway</string>
+
+    <string name="player_a_name">Martin Fourcade</string>
+    <string name="player_b_name">Lars Bergen</string>
+</resources>
