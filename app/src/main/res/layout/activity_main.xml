@@ -1,300 +1,306 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="16dp">
+    android:fillViewport="true">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:paddingBottom="@dimen/main_layout_padding_b"
+        android:paddingTop="@dimen/main_layout_padding_t">
 
         <LinearLayout
-            android:id="@+id/playerA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingTop="16dp"
-            tools:context=".MainActivity">
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/playerA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="22dp"
-                android:orientation="horizontal"
-                android:paddingLeft="17dp">
-
-                <ImageView
-                    android:layout_width="19dp"
-                    android:layout_height="18dp"
-                    android:layout_marginRight="6dp"
-                    android:src="@drawable/flagforfrance2x" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/player_a_country"
-                    android:textColor="@color/textLighter"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="7dp"
-                    android:src="@drawable/martinfourcade2x" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="9dp"
-                    android:text="@string/player_a_name"
-                    android:textColor="@color/textMain"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:gravity="center_horizontal">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/player_layout_padding_t"
+                tools:context=".MainActivity">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:paddingRight="16dp">
+                    android:layout_marginBottom="@dimen/country_field_margin_b"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/country_field_padding_l">
+
+                    <ImageView
+                        android:layout_width="@dimen/flag_width"
+                        android:layout_height="@dimen/flag_height"
+                        android:layout_marginRight="@dimen/flag_margin_r"
+                        android:contentDescription="@string/img_content_flag"
+                        android:src="@drawable/flagforfrance2x" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
-                        android:text="hit"
-                        android:textColor="@color/textLighter"/>
+                        android:text="@string/player_a_country"
+                        android:textColor="@color/textLighter" />
 
-                    <TextView
-                        android:id="@+id/player_a_score"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textSize="32dp"
-                        android:textColor="@color/textMain"/>
                 </LinearLayout>
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/textLighter" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:paddingLeft="16dp">
+                    android:layout_marginBottom="@dimen/player_field_margin_b"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/player_field_padding_l">
+
+                    <ImageView
+                        android:layout_width="@dimen/avatar_width"
+                        android:layout_height="@dimen/avatar_height"
+                        android:layout_marginRight="@dimen/avatar_margin_r"
+                        android:contentDescription="@string/img_content_avatar"
+                        android:src="@drawable/martinfourcade2x" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
-                        android:text="all"
-                        android:textColor="@color/textLighter"/>
+                        android:padding="@dimen/player_name_padding"
+                        android:text="@string/player_a_name"
+                        android:textColor="@color/textMain" />
 
-                    <TextView
-                        android:id="@+id/player_a_tries"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textSize="32dp"
-                        android:textColor="@color/textMain"/>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/score_field_margin_b"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingRight="@dimen/hit_field_padding_r">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/score_text_margin_bottom"
+                            android:text="@string/score_text"
+                            android:textColor="@color/textLighter" />
+
+                        <TextView
+                            android:id="@+id/player_a_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zero"
+                            android:textColor="@color/textMain"
+                            android:textSize="@dimen/text_size_score" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/thin_line_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/textLighter" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/all_field_padding_l">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/score_text_margin_bottom"
+                            android:text="@string/tries_text"
+                            android:textColor="@color/textLighter" />
+
+                        <TextView
+                            android:id="@+id/player_a_tries"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zero"
+                            android:textColor="@color/textMain"
+                            android:textSize="@dimen/text_size_score" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonHitA"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/button_margin_lr"
+                    android:layout_marginRight="@dimen/button_margin_lr"
+                    android:onClick="plusOnePointToA"
+                    android:text="@string/button_hit" />
+
+                <Button
+                    android:id="@+id/buttonMissedA"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/button_margin_lr"
+                    android:layout_marginRight="@dimen/button_margin_lr"
+                    android:onClick="plusOnePointToATries"
+                    android:text="@string/button_miss" />
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/buttonHitA"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1"
-                android:onClick="plusOnePointToA"
-                android:text="hit" />
+            <View
+                android:layout_width="@dimen/thin_line_width"
+                android:layout_height="match_parent"
+                android:background="@color/textLighter" />
 
-            <Button
-                android:id="@+id/buttonMissedA"
+            <LinearLayout
+                android:id="@+id/playerB"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="plusOnePointToATries"
-                android:text="missed" />
+                android:orientation="vertical"
+                android:paddingTop="@dimen/player_layout_padding_t"
+                tools:context=".MainActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/country_field_margin_b"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/country_field_padding_l">
+
+                    <ImageView
+                        android:layout_width="@dimen/flag_width"
+                        android:layout_height="@dimen/flag_height"
+                        android:layout_marginRight="@dimen/flag_margin_r"
+                        android:contentDescription="@string/img_content_flag"
+                        android:src="@drawable/flagfornorway2x" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/player_b_country"
+                        android:textColor="@color/textLighter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/player_field_margin_b"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/player_field_padding_l">
+
+                    <ImageView
+                        android:layout_width="@dimen/avatar_width"
+                        android:layout_height="@dimen/avatar_height"
+                        android:layout_marginRight="@dimen/avatar_margin_r"
+                        android:contentDescription="@string/img_content_avatar"
+                        android:src="@drawable/larsberger2x" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/player_name_padding"
+                        android:text="@string/player_b_name"
+                        android:textColor="@color/textMain" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/score_field_margin_b"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingRight="@dimen/hit_field_padding_r">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/score_text_margin_bottom"
+                            android:text="@string/score_text"
+                            android:textColor="@color/textLighter" />
+
+                        <TextView
+                            android:id="@+id/player_b_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zero"
+                            android:textColor="@color/textMain"
+                            android:textSize="@dimen/text_size_score" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/thin_line_width"
+                        android:layout_height="match_parent"
+                        android:background="@color/textLighter" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/all_field_padding_l">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/score_text_margin_bottom"
+                            android:text="@string/tries_text"
+                            android:textColor="@color/textLighter" />
+
+                        <TextView
+                            android:id="@+id/player_b_tries"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zero"
+                            android:textColor="@color/textMain"
+                            android:textSize="@dimen/text_size_score" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonHitB"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/button_margin_lr"
+                    android:layout_marginRight="@dimen/button_margin_lr"
+                    android:onClick="plusOnePointToB"
+                    android:text="@string/button_hit" />
+
+                <Button
+                    android:id="@+id/buttonMissedB"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/button_margin_lr"
+                    android:layout_marginRight="@dimen/button_margin_lr"
+                    android:onClick="plusOnePointToBTries"
+                    android:text="@string/button_miss" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/textLighter" />
-
-        <LinearLayout
-            android:id="@+id/playerB"
+        <Button
+            android:id="@+id/reset_all_scores"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingTop="16dp"
-            tools:context=".MainActivity">
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/button_reset_all_margin_lr"
+            android:layout_marginRight="@dimen/button_reset_all_margin_lr"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="resetAllScores"
+            android:text="@string/button_reset"
+            android:textAllCaps="true"
+            android:textColor="@color/textLight" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="22dp"
-                android:orientation="horizontal"
-                android:paddingLeft="17dp">
+    </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="19dp"
-                    android:layout_height="18dp"
-                    android:layout_marginRight="6dp"
-                    android:src="@drawable/flagfornorway2x" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/player_b_country"
-                    android:textColor="@color/textLighter"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="7dp"
-                    android:src="@drawable/larsberger2x" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="9dp"
-                    android:text="@string/player_b_name"
-                    android:textColor="@color/textMain"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:gravity="center_horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:paddingRight="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
-                        android:text="hit"
-                        android:textColor="@color/textLighter"/>
-
-                    <TextView
-                        android:id="@+id/player_b_score"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textSize="32dp"
-                        android:textColor="@color/textMain"/>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/textLighter" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:paddingLeft="16dp"
-                    android:paddingTop="0dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
-                        android:text="all"
-                        android:textColor="@color/textLighter"/>
-
-                    <TextView
-                        android:id="@+id/player_b_tries"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textSize="32dp"
-                        android:textColor="@color/textMain"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/buttonHitB"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1"
-                android:onClick="plusOnePointToB"
-                android:text="hit" />
-
-            <Button
-                android:id="@+id/buttonMissedB"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_weight="1"
-                android:onClick="plusOnePointToBTries"
-                android:text="missed" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/reset_all_scores"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:onClick="resetAllScores"
-        android:text="play again"
-        android:textAllCaps="true"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/textLight"/>
-
-</RelativeLayout>
+</ScrollView>

@@ -6,4 +6,16 @@
 
     <string name="player_a_name">Martin Fourcade</string>
     <string name="player_b_name">Lars Bergen</string>
+
+    <string name="score_text">hit</string>
+    <string name="tries_text">all</string>
+
+    <string name="button_hit">hit</string>
+    <string name="button_miss">missed</string>
+    <string name="button_reset">play again</string>
+
+    <string name="zero">0</string>
+
+    <string name="img_content_flag">flag of the country</string>
+    <string name="img_content_avatar">player image</string>
 </resources>

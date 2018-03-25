@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="flag_width">19dp</dimen>
+    <dimen name="flag_height">18dp</dimen>
+    <dimen name="flag_margin_r">6dp</dimen>
+    <dimen name="avatar_width">40dp</dimen>
+    <dimen name="avatar_height">40dp</dimen>
+    <dimen name="avatar_margin_r">7dp</dimen>
+    <dimen name="player_name_padding">9dp</dimen>
+
+    <dimen name="player_field_padding_l">16dp</dimen>
+    <dimen name="player_field_margin_b">32dp</dimen>
+    <dimen name="score_field_margin_b">32dp</dimen>
+    <dimen name="hit_field_padding_r">16dp</dimen>
+    <dimen name="all_field_padding_l">16dp</dimen>
+    <dimen name="country_field_padding_l">17dp</dimen>
+    <dimen name="country_field_margin_b">22dp</dimen>
+
+    <dimen name="score_text_margin_bottom">16dp</dimen>
+
+    <dimen name="button_height">54dp</dimen>
+    <dimen name="button_margin_lr">16dp</dimen>
+    <dimen name="button_reset_all_margin_lr">100dp</dimen>
+
+    <dimen name="main_layout_padding_b">32dp</dimen>
+    <dimen name="main_layout_padding_t">16dp</dimen>
+    <dimen name="player_layout_padding_t">16dp</dimen>
+
+    <dimen name="text_size_score">32sp</dimen>
+
+    <dimen name="thin_line_width">1dp</dimen>
+</resources>
